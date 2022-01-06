@@ -21,9 +21,6 @@ Item.hasMany(Note, { foreignKey: 'iid' })
 //comments belong to an item(post)
 Note.belongsTo(Item, { foreignKey: 'iid' })
 
-User.hasMany(Note, { foreignKey: 'uid' })  
-
-Note.belongsTo(User, { foreignKey: 'uid' })
 
 module.exports = { 
   User, 
