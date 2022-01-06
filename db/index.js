@@ -1,7 +1,3 @@
-require('dotenv').config()
-
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize(process.env.LOCAL_DB_URL)
-
-module.exports = sequelize
+module.exports = new Sequelize(process.env.JAWSDB_URL || process.env.LOCALDB_URL)
